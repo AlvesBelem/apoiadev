@@ -19,7 +19,7 @@ export default async function Apoia({
     return notFound()
   }
 
-  console.log(user);
+
 
   return (
     <div className=" min-h-[calc(100vh-64px)]">
@@ -68,7 +68,7 @@ export default async function Apoia({
           </h3>
           <FormDonate
             slug={user.username!}
-            creatorId={user.id}
+            creatorId={user.connectedStripeAccountId ?? ""}
           />
         </section>
       </div>

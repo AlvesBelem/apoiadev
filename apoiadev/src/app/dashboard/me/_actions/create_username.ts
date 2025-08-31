@@ -3,7 +3,6 @@
 import { z } from "zod";
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
-import { create } from "domain";
 import { createSlug } from "@/utils/create-slug";
 
 const createUsernameSchema = z.object({

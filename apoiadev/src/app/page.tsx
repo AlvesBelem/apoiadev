@@ -7,7 +7,7 @@ export default function Home() {
 
   async function handleRegister() {
     "use server"
-    await signIn('github', { redirectTo: '/dashboard' })
+    await signIn('google', { redirectTo: '/dashboard' })
   }
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-b from-white to-gray-50">

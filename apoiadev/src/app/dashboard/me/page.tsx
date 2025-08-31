@@ -2,7 +2,7 @@ import { auth } from "@/lib/auth";
 import { redirect } from "next/navigation";
 import { UrlPreview } from "./_components/url";
 import { CardProfile } from "./_components/card-profile";
-import { Description } from "@radix-ui/react-dialog";
+
 
 
 export default async function Me() {
@@ -13,7 +13,7 @@ export default async function Me() {
 
   const userData = {
     id: session.user.id,
-    name: session.user.name,
+    name: session.user.name || null,
     username: session.user?.username || null,
     bio: session.user?.bio || null,
     image: session.user?.image || null,
@@ -26,7 +26,7 @@ export default async function Me() {
         <UrlPreview username={userData.username} />
       </section>
       <CardProfile user={userData} />
-      
+
     </main >
   )
 }
